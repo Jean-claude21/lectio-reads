@@ -35,6 +35,11 @@ if [ -n "$FLUXIO_REPO" ] && [ -n "$FLUXIO_DEPLOY_KEY_B64" ]; then
       sleep "$FLUXIO_SYNC_INTERVAL"
       FLUXIO_BEFORE=$(git -C /app rev-parse HEAD 2>/dev/null || echo none)
       git -C /app fetch -q --depth 1 origin "$FLUXIO_BRANCH" 2>/dev/null || continue
+      # Only reset when the remote actually moved. Resetting every tick fights
+      # with files the dev server regenerates (TanStack's routeTree.gen.ts),
+      # which would reload the page every few seconds.
+      FLUXIO_REMOTE=$(git -C /app rev-parse FETCH_HEAD 2>/dev/null || echo none)
+      [ "$FLUXIO_BEFORE" = "$FLUXIO_REMOTE" ] && continue
       git -C /app reset -q --hard FETCH_HEAD 2>/dev/null || continue
       FLUXIO_AFTER=$(git -C /app rev-parse HEAD 2>/dev/null || echo none)
 
