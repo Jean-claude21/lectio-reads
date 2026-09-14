@@ -1,0 +1,17 @@
+packages:
+  - .
+
+allowBuilds:
+  esbuild: true
+  lightningcss: true
+  sharp: true
+
+# The lockfile is generated on Windows; Linux binaries must be resolved too,
+# otherwise the container cannot start (rolldown native binding).
+supportedArchitectures:
+  os:
+    - win32
+    - linux
+  cpu:
+    - x64
+    - arm64
