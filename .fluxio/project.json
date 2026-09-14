@@ -1,0 +1,26 @@
+{
+  "fluxioVersion": 1,
+  "slug": "lectio-reads",
+  "github": {
+    "repo": "Jean-claude21/lectio-reads",
+    "defaultBranch": "main",
+    "devBranch": "dev"
+  },
+  "neon": {
+    "projectId": "royal-mouse-54581135",
+    "branches": {
+      "main": "br-falling-math-b2ml1wlz",
+      "dev": "br-winter-glitter-b29cahxi"
+    }
+  },
+  "netlify": {
+    "siteId": "b74309b5-175b-495c-8d6a-72d341494455",
+    "url": "https://lectio-reads.netlify.app"
+  },
+  "coolify": {
+    "projectUuid": "gdsmzdzemvtf4zthlahmluhl",
+    "environmentUuid": "xeaovjzvquotc8bfhlvz2sin",
+    "applicationUuid": "sywgalt1f1of4tb6vmj5manw",
+    "devUrl": "https://sywgalt1f1of4tb6vmj5manw.vttlife.com"
+  }
+}
