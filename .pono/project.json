@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "name": "lectio-reads",
+  "environments": [
+    {
+      "kind": "production",
+      "branch": "main",
+      "url": "https://lectio-reads.netlify.app",
+      "hosting": {
+        "provider": "netlify",
+        "ref": "b74309b5-175b-495c-8d6a-72d341494455"
+      }
+    },
+    {
+      "kind": "development",
+      "branch": "dev",
+      "url": "https://sywgalt1f1of4tb6vmj5manw.vttlife.com",
+      "hosting": {
+        "provider": "coolify",
+        "ref": "sywgalt1f1of4tb6vmj5manw"
+      }
+    }
+  ],
+  "database": {
+    "provider": "neon",
+    "ref": "royal-mouse-54581135",
+    "branches": {
+      "production": "main",
+      "development": "dev"
+    }
+  },
+  "importedFrom": "fluxio"
+}
